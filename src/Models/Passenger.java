@@ -40,11 +40,27 @@ public abstract class Passenger {
         this.passengerNumber = passengerNumber;
     }
 
-    public abstract PassengerType getType();
+    protected abstract PassengerType getType();
 
-    public abstract void registerForActivity(Activity activity);
+    protected abstract void registerForActivity(Activity activity);
 
-    public abstract double getBalance();
+    protected abstract double getBalance();
+
+    public void getInfo() {
+        System.out.println("Passenger Details");
+        System.out.println("Passenger Name: " + this.getName());
+        System.out.println("Passenger Number: " + this.getPassengerNumber());
+        System.out.println("Balance: " + this.getBalance());
+        System.out.println("List of Activities");
+        System.out.println("----------------------");
+        for (Activity activity : this.getActivities()) {
+            System.out.println("Activity: " + activity.getName());
+            System.out.println("Description: " + activity.getDescription());
+            System.out.println("Cost: " + activity.getCost());
+            System.out.println("Capacity: " + activity.getCapacity());
+            System.out.println("----------------------");
+        }
+    }
 
     public List<Activity> getActivities() {
         return this.activities;

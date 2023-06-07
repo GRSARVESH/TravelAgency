@@ -29,5 +29,7 @@ public class Main {
         travelPackage.printItinerary();
         travelPackage.getAvailableActivities();
         travelPackage.getPassengers();
+        goldPassenger.getInfo();
+        travelPackage.getAvailableActivities();
     }
 }

@@ -46,7 +46,3 @@ To use the system, you can follow these steps:
 ## Unit Testing
 
 Unit tests have been written for each class to ensure the correctness of the implementation. The JUnit framework is used for unit testing the classes.
-
-## License
-
-This software system is released under the MIT License. Feel free to use and modify it as per your requirements.

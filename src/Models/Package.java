@@ -74,6 +74,7 @@ public class Package {
         System.out.println("Travel Package: " + name);
         for (Destination destination : itinerary) {
             System.out.println("Destination: " + destination.getName());
+            System.out.println("List of Activities in this location");
             for (Activity activity : destination.getActivities()) {
                 System.out.println("Activity: " + activity.getName());
                 System.out.println("Description: " + activity.getDescription());
@@ -81,7 +82,8 @@ public class Package {
                 System.out.println("Capacity: " + activity.getCapacity());
                 System.out.println("----------------------");
             }
-            System.out.println("End");
+            System.out.println("*-----------------------*");
+            System.out.println("*-----------------------*");
         }
     }
 
@@ -95,16 +97,27 @@ public class Package {
             System.out.println("Number: " + passenger.getPassengerNumber());
             System.out.println("----------------------");
         }
+        System.out.println("*-----------------------*");
+
     }
 
-    public List<Activity> getAvailableActivities() {
-        List<Activity> availableActivities = new ArrayList<>();
+    public void getAvailableActivities() {
+        System.out.println("*-----------------------*");
+        System.out.println("Available Activities:");
         for (Destination destination : itinerary) {
+            if (destination.getActivities().size() == 0)
+                continue;
+            System.out.println("Destination: " + destination.getName());
             for (Activity activity : destination.getActivities()) {
-                availableActivities.add(activity);
-
+                int availableSpaces = activity.getCapacity() - activity.getPassengers().size();
+                if (availableSpaces > 0) {
+                    System.out.println("Activity: " + activity.getName());
+                    System.out.println("Description: " + activity.getDescription());
+                    System.out.println("Available Spaces: " + availableSpaces);
+                    System.out.println("---------------------");
+                }
             }
         }
-        return availableActivities;
+        System.out.println("*-----------------------*");
     }
 }

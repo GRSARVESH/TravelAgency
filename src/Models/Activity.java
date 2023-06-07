@@ -68,6 +68,7 @@ public class Activity {
             System.out.println("Low Balance....");
             return;
         }
+        passenger.addToActivity(this);
         this.passengers.add(passenger);
         System.out.println("Passenger: " + passenger.getName() + " added successfully");
     }
@@ -77,6 +78,7 @@ public class Activity {
             System.out.println("No Passengers!");
             return;
         }
+        passenger.cancelActivity(this);
         this.passengers.remove(passenger);
         System.out.println("Passenger: " + passenger.getName() + " removed successfully");
     }
