@@ -20,13 +20,17 @@ public class Package {
         this.itinerary.add(destination);
     }
 
+    public void removeDestination(Destination destination) {
+        this.itinerary.remove(destination);
+    }
+
     public void addPassenger(Passenger passenger) {
         if (this.passengers.size() > this.capacity) {
             System.out.println("Passengers full!");
             return;
         }
         this.passengers.add(passenger);
-        System.out.println("Passenger: " + passenger + " added successfully");
+        System.out.println("Passenger: " + passenger.getName() + " added successfully");
     }
 
     public void removePassenger(Passenger passenger) {
@@ -35,7 +39,7 @@ public class Package {
             return;
         }
         this.passengers.remove(passenger);
-        System.out.println("Passenger: " + passenger + " removed successfully");
+        System.out.println("Passenger: " + passenger.getName() + " removed successfully");
     }
 
     public String getName() {

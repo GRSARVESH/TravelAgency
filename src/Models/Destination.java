@@ -32,4 +32,8 @@ public class Destination {
         this.activities.add(activity);
     }
 
+    public void removeActivity(Activity activity) {
+        this.activities.remove(activity);
+    }
+
 }
