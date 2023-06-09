@@ -1,4 +1,4 @@
-# Travel Agency
+# Travel Agency(LLD)
 
 This software system allows travel agencies to maintain their travel packages' itinerary and passengers. It provides functionality to manage travel packages, destinations, activities, and passenger sign-ups.
 
