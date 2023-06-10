@@ -4,7 +4,7 @@ This software system allows travel agencies to maintain their travel packages' i
 
 ## Features
 
-- Create and manage travel packages with a name, passenger capacity, and itinerary.
+- Create and manage travel packages with a name, passenger capacity , and itinerary.
 - Define destinations within a travel package, each with a name and a list of activities available.
 - Specify activities with a name, description, cost, and capacity. Each activity is associated with a destination.
 - Passengers can sign up for activities at different destinations within a travel package.
