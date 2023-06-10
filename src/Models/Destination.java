@@ -3,6 +3,14 @@ package Models;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * 
+ * The Destination class represents a destination with its associated
+ * activities.
+ * 
+ * It tracks the name of the destination and a set of activities available at
+ * the destination.
+ */
 public class Destination {
     private String name;
     private Set<Activity> activities;

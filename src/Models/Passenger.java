@@ -5,11 +5,25 @@ import java.util.ArrayList;
 
 import Enum.PassengerType;
 
+/**
+ * 
+ * The Passenger class represents a passenger.
+ * 
+ * It is an abstract class that provides common functionality for all types of
+ * passengers.
+ */
 public abstract class Passenger {
     private String name;
     private int passengerNumber;
     private List<Activity> activities;
 
+    /**
+     * 
+     * Constructs a Passenger object with the specified name and passenger number.
+     * 
+     * @param name            The name of the passenger.
+     * @param passengerNumber The passenger number of the passenger.
+     */
     public Passenger(String name, int passengerNumber) {
         this.name = name;
         this.passengerNumber = passengerNumber;
@@ -46,6 +60,11 @@ public abstract class Passenger {
 
     protected abstract double getBalance();
 
+    /**
+     * 
+     * Retrieves the information of the passenger, including their details and the
+     * list of activities they are registered for.
+     */
     public void getInfo() {
         System.out.println("Passenger Details");
         System.out.println("Passenger Name: " + this.getName());

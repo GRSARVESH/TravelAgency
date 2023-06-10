@@ -4,6 +4,13 @@ import java.util.List;
 
 import java.util.ArrayList;
 
+/**
+ * 
+ * The Activity class represents an activity that passengers can participate in.
+ * 
+ * It tracks the name, description, cost, capacity, and the list of passengers
+ * associated with the activity.
+ */
 public class Activity {
     private String name;
     private String description;
@@ -11,6 +18,17 @@ public class Activity {
     private int capacity;
     private List<Passenger> passengers;
 
+    /**
+     * 
+     * Constructs an Activity object with the specified name, description, cost, and
+     * capacity.
+     * 
+     * @param name        The name of the activity.
+     * @param description The description of the activity.
+     * @param cost        The cost of the activity.
+     * @param capacity    The maximum number of passengers that can participate in
+     *                    the activity.
+     */
     public Activity(String name, String description, double cost, int capacity) {
         this.passengers = new ArrayList<Passenger>();
         this.name = name;
@@ -59,6 +77,15 @@ public class Activity {
         this.passengers = passengers;
     }
 
+    /**
+     * 
+     * Adds a passenger to the activity if there is available capacity and the
+     * passenger has sufficient balance.
+     * If the capacity is full or the passenger has insufficient balance,
+     * appropriate messages are displayed.
+     * 
+     * @param passenger The passenger to be added to the activity.
+     */
     public void addPassenger(Passenger passenger) {
         if (this.passengers.size() >= this.capacity) {
             System.out.println("Passengers full!");
@@ -73,6 +100,14 @@ public class Activity {
         System.out.println("Passenger: " + passenger.getName() + " added successfully");
     }
 
+    /**
+     * 
+     * Removes a passenger from the activity.
+     * If there are no passengers associated with the activity, an appropriate
+     * message is displayed.
+     * 
+     * @param passenger The passenger to be removed from the activity.
+     */
     public void removePassenger(Passenger passenger) {
         if (this.passengers.size() == 0) {
             System.out.println("No Passengers!");

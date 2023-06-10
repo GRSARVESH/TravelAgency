@@ -3,6 +3,13 @@ package Models;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 
+ * The Package class represents a travel package.
+ * 
+ * It contains information about the package, such as its name, capacity,
+ * passengers, and itinerary.
+ */
 public class Package {
     private String name;
     private int capacity;
@@ -74,6 +81,10 @@ public class Package {
         this.itinerary = itinerary;
     }
 
+    /**
+     * 
+     * Prints the itinerary of the travel package.
+     */
     public void printItinerary() {
         System.out.println("Travel Package: " + name);
         for (Destination destination : itinerary) {
@@ -91,6 +102,10 @@ public class Package {
         }
     }
 
+    /**
+     * 
+     * Prints the list of passengers in the travel package.
+     */
     public void printPassengerList() {
         System.out.println("Travel Package: " + name);
         System.out.println("Passenger Capacity: " + this.capacity);
@@ -105,6 +120,10 @@ public class Package {
 
     }
 
+    /**
+     * 
+     * Retrieves the available activities in the travel package.
+     */
     public void getAvailableActivities() {
         System.out.println("*-----------------------*");
         System.out.println("Available Activities:");
